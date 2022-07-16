@@ -1,0 +1,58 @@
+# Site settings
+title: Razor Enhanced
+email: your-email@domain.com
+description: >
+  On the bleeding edge!
+lang: en-US
+
+baseurl: "/razor.enhanced/" # the subpath of your site, e.g. /blog/
+url: https://morbitz.github.io/razor.enhanced # the base hostname & protocol for your site
+git_address: https://github.com/morbitz/razor.enhanced
+git_edit_address: https://github.com/morbitz/razor.enhanced/blob/gh-pages
+
+# theme options from https://bootswatch.com/3/
+# comment out this to use default Bootstrap
+bootwatch: github # cerulean cosmo custom cyborg darkly flatly github journal lumen readable sandstone simplex slate solar spacelab superhero united yeti
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+# Plugins (previously gems:)
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .idea/
+  - .gitignore
+  - README.md
+  - vendor
+timezone: America/New_York
+defaults:
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    sectionid: blog
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+
+collections:
+  docs:
+    permalink: /:collection/:path/
+    output: true
+  posts:
+    permalink: /blog/:year/:month/:day/:title/
+    output: true
