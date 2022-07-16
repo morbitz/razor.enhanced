@@ -5,7 +5,7 @@ description: >
   On the bleeding edge!
 lang: en-US
 
-baseurl: "/razor.enhanced/" # the subpath of your site, e.g. /blog/
+baseurl: "razor.enhanced" # the subpath of your site, e.g. /blog/
 url: https://morbitz.github.io/razor.enhanced # the base hostname & protocol for your site
 git_address: https://github.com/morbitz/razor.enhanced
 git_edit_address: https://github.com/morbitz/razor.enhanced/blob/gh-pages
